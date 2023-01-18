@@ -1,0 +1,27 @@
+---
+export interface Props {
+  title: string
+  description: string
+  img: string
+  idx: number
+}
+
+const { title, description, img, idx } = Astro.props;
+---
+
+<div class="gap-16 mt-20 px-4 w-full max-w-lg lg:max-w-4xl flex lg:flex-row flex-col items-center justify-between text-black">
+  {idx % 2 === 1 && <img
+    class="p-4 max-w-md"
+    src={img}
+  />}
+  <div>
+    <h2 class="text-xl font-bold mb-4">{title}</h2>
+    <p class="sm:text-base text-sm mb-4">
+      {description}
+    </p>
+  </div>
+  {idx % 2 === 0 && <img
+    class="p-4 max-w-md"
+    src={img}
+  />}
+</div>

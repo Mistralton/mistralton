@@ -1,0 +1,29 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Projects from '../components/Projects.astro';
+import Subheader from '../components/Subheader.astro';
+import Team from '../components/Team';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	</head>
+	<body class="bg-[#A9DEE7]">
+		<Header />
+		<Hero />
+		<Subheader />
+		<Team client:idle/>
+		<Projects />
+		<div class="h-[50vh] bg-gradient-to-b from-[#A9DEE7] to-[#4D5A88] w-full flex flex-col items-center justify-center">
+			<h2 class="font-extrabold text-4xl text-center text-white max-w-[800px]">Follow us on Github</h2>
+			<a target="_blank" rel="noopener" href="https://github.com/Mistralton"
+			class="bg-gray-700 mr-4 border-none text-white font-bold py-4 px-6 text-center rounded-md float-left mt-6 transition duration-500 hover:bg-gray-600">
+				Projects
+			</a>
+		</div>
+		<Footer />
+	</body>
+</html>
