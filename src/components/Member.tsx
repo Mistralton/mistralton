@@ -9,7 +9,7 @@ interface Props {
 
 export default function Member({ name, position, skills, desc, img }: Props) {
   return (
-    <div class="mt-40 flex justify-around items-center max-w-3xl w-full">
+    <div class="mt-40 flex justify-around items-center max-w-3xl w-full min-h-[24rem]">
       <div>
         <img class="rounded-full mb-4" src={`/${img}.jpg`} width="150" />
         <div class="flex items-center justify-center gap-4 w-[150px]">
